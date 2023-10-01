@@ -24,3 +24,10 @@ h1{
     text-align: center;
     margin-bottom: 15px;
 }
+
+#cityInput {
+    padding: 5px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
