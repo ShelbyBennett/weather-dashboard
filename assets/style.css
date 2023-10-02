@@ -1,11 +1,15 @@
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: burlywood;
+    background-color: #ead2ac;
     margin: 0;
     padding: 0;
 }
 
-.container {
+header{
+    background-color: #7BAFD4;
+    padding:20px;
+}
+/* .container {
     max-width: 500px;
     margin: 0 auto;
     background-color: #fff;
@@ -13,6 +17,14 @@ body{
     border-radius: 5px; 
     box-shadow: 0 0 5px rgba(0,0,0,0.2)
 
+} */
+
+form{
+    margin-top: 3vh;;
+}
+#search-btn{
+    background-color: #4281a4;
+    color:#e5e5e5
 }
 
 h1{
@@ -20,14 +32,14 @@ h1{
     color: black;
 }
 
-.search {
+/* .search {
     text-align: center;
     margin-bottom: 15px;
-}
+} */
 
-#cityInput {
+/* #cityInput {
     padding: 5px;
     width: 50%;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
+} */
