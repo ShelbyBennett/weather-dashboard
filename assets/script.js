@@ -133,10 +133,29 @@ function displayForecast(data){
       humidity.textContent= ` ${data[forIn].main.humidity} %`
       wind.textContent= ` ${data[forIn].wind.speed} MPH`
 
-      //times
-      
-    
+      //all elements
+      span.append(icon)
+      cardHeaderTitle.append(span)
+      cardHeader.append(cardHeaderTitle)
+      temp.prepend(span1)
+      humidity.prepend(span2)
+      wind.prepend(span3)
+      cardBody.append(temp,humidity,wind)
+      card.append(cardHeader,cardBody)
+      forecastEL.append(card)
     }
+}
+//allow searched citites to be saved in local storage
+const storage=(city)=>{ 
+    searchHistory=JSON.parse(localStorage.getItem("history"))||[]
+    if(!cityArray.includes(city) && !searchHistory.includes(city)){
+        console.log(cityArray);
+        cityArray.push(city)
+        // console.log(cityArray, "before get item")
+        localStorage.setItem("history",JSON.stringify(cityArray))
+        getHistory(city)
+        
+    } 
 }
 
 
