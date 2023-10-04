@@ -66,7 +66,31 @@ form{
     margin-left: 4vw;
 }
 
+.forecast{
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 3vh;
+}
 
+h5, h2{
+    text-align: center;
+}
+
+.card-header{
+    background-color: #7BAFD4;
+    color: whitesmoke;
+}
+
+.card-body{
+    background-color: #ebf2fa;
+    color: #353839;
+}
+
+.labels{
+    font-weight: bold;
+    color: #353839;
+}
 /* .search {
     text-align: center;
     margin-bottom: 15px;
