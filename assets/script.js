@@ -1,6 +1,9 @@
 const searchBtn= document.getElementById("search-btn")
 const searchInput= document.getElementById("input-search")
 const currentWeather= document.querySelector(".current-weather")
+const forecastEL= document.querySelector(".forecast")
+const todayDate= document.getElementById("today-date")
+const historyContainer= document.querySelector(".search-history")
 
 // get the API Key
 const apiKey ="d7104f28f24bae988a39232fd8b0d446"
