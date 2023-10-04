@@ -5,9 +5,22 @@ const forecastEL= document.querySelector(".forecast")
 const todayDate= document.getElementById("today-date")
 const historyContainer= document.querySelector(".search-history")
 
+const today=dayjs().format("dddd, D MMMM YYYY")
+todayDate.textContent=today
+
+//for local storage
+let cityArray=[]
+
 // get the API Key
 const apiKey ="d7104f28f24bae988a39232fd8b0d446"
-let output;
+
+const getHistory=(searchHistory)=>{
+    const btn= document.createElement("button")
+    btn.setAttribute("class", "btn history-btn")
+    btn.setAttribute("value", searchHistory)
+    btn.textContent=searchHistory
+    historyContainer.append(btn)
+}
 
 function getWeather(cityName){
  const url =`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`
