@@ -99,7 +99,43 @@ function displayForecast(data){
     for (let i= 0; i< 5; i++) {
 
         const card= document.createElement("div")
-        
+        card.setAttribute("class", "card forecast-card")
+
+        //header for city name
+        const cardHeader=document.createElement("div")
+        cardHeader.setAttribute("class", "card-header has-text-centered")
+        const cardHeaderTitle= document.createElement("h5")
+        cardHeaderTitle.setAttribute("class", "card-title ")
+
+        //converting the time
+        const day= new Date(data[forIn].dt*1000).toDateString()
+      cardHeaderTitle.textContent=day
+      const span = document.createElement("span")
+      const icon= document.createElement("img")
+      icon.setAttribute("src","https://openweathermap.org/img/w/" + data[forIn].weather[0].icon + ".png" )
+  
+      //card body rest of infor
+      const cardBody=document.createElement("div")
+      cardBody.setAttribute("class","card-body")
+      const span1=document.createElement("span")
+      span1.setAttribute("class","labels")
+      const span2=document.createElement("span")
+      span2.setAttribute("class","labels")
+      const span3=document.createElement("span")
+      span3.setAttribute("class","labels")
+      span1.textContent="Temperature: "
+      const temp= document.createElement("p")
+      span2.textContent="Humidity: "
+      const humidity= document.createElement("p")
+      span3.textContent="Wind Speed: "
+      const wind =document.createElement("p")
+      temp.textContent=` ${data[forIn].main.temp} F`
+      humidity.textContent= ` ${data[forIn].main.humidity} %`
+      wind.textContent= ` ${data[forIn].wind.speed} MPH`
+
+      //times
+      
+    
     }
 }
 
