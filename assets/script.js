@@ -42,24 +42,21 @@ function getForecast(lat, lon){
     .then((response)=>response.json())
     .then((data)=>{
         console.log(data);
+        displayForecast(data.list)
     })
 }
 
 function displayWeather(data){
+   currentWeather.innerHTML=""
+   //main card
+   const card= document.createElement("div")
+   card.setAttribute("class", "card main-card")
 
-     output+= `<div class="card" id="main-card">
-     <div class="card-header">
-      <h2 class="card-title">${data.name}<span></span></h2>
-     </div>
-     <div class="card-body">
-       <p class="card-text"> Temperature: ${data.main.temp} F</p>
-       <p class="card-text"> Humidity: ${data.main.humidity} %</p>
-       <p class="card-text"> Wind Speed: ${data.wind.speed} MPH</p>
-      
-     </div>
-   </div>`
-
-   currentWeather.innerHTML= output;
+   //header for city name and icon
+   const cardHeader=document.createElement("div")
+   cardHeader.setAttribute("class","card-header has-text-centered")
+   const cardHeaderTitle= document.createElement("h2")
+   
 }
 
 
