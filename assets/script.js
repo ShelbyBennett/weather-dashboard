@@ -160,13 +160,21 @@ const storage=(city)=>{
 
 
 
-
-
-
 searchBtn.addEventListener('click', (e) => {
     e.preventDefault()
     const city = searchInput.value;
     console.log(city);
     getWeather(city)
+
+    storage(city)
    
+})
+//event listener for btns
+historyContainer.addEventListener("click",(e)=>{
+    e.preventDefault()
+    currentWeather.innerHTML=""
+    forecastEL.innerHTML=""
+    const cityClick= this.event.target.value
+    console.log(cityClick);
+    getWeather(cityClick)
 })
