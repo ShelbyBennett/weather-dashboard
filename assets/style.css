@@ -45,11 +45,25 @@ form{
     margin-left: 2vw;
 }
 .history-btn{
-    
+    background-color: #a5be00;
+    color:whitesmoke;
+}
+
+.col-md-9{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #main-card{
-    width: 50vw;
+    width: 43vw;
+    margin-left: 15vw;
+    margin-top: 3vh;
+}
+
+.main-body p{
+    font-size: 1.4rem;
+    margin-left: 4vw;
 }
 
 
