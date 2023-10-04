@@ -9,7 +9,7 @@ header{
     background-color: #7BAFD4;
     padding:20px;
 }
-h1{
+h1, #today-date {
     text-align: center;
     color: black;
 }
@@ -29,11 +29,23 @@ h1{
 }
 
 form{
-    margin-top: 3vh;;
+    margin-top: 3vh;
+    margin-left: 2vw;
 }
 #search-btn{
     background-color: #4281a4;
     color:#e5e5e5
+}
+.search-history{
+    display:flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 10vw;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+.history-btn{
+    
 }
 
 #main-card{
