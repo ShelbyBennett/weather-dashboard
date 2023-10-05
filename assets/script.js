@@ -22,6 +22,12 @@ const getHistory=(searchHistory)=>{
     historyContainer.append(btn)
 }
 
+let searchHistory=JSON.parse(localStorage.getItem("history"))|| []
+console.log(searchHistory)
+for(let i=0; i<searchHistory.length;i++){
+    getHistory(searchHistory[i])
+}
+
 function getWeather(cityName){
  const url =`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`
 fetch(url)
